@@ -1,6 +1,7 @@
 import op_corregido as op 
 import numpy as np
 import trim_pso as tri
+import animador as gr
 print ("Bienvenido ingeniero al programa de simulacion de vuelo")
 print("Cual caso desea experimentar")
 print("1. Vuelo recto y nivelado")
@@ -32,6 +33,7 @@ if opcion == 1:
         X0 = X0 + np.array(X_dot) * dt
         x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
     op.guardar_csv(x0, "RCAM.csv")
+    gr.grafic()
     print("Simulacion terminada")
 elif opcion == 2:
     print("\nCASO 2")
@@ -74,6 +76,7 @@ elif opcion == 2:
             X0 = X0 + np.array(X_dot) * dt
             x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
     op.guardar_csv(x0, "RCAM.csv")
+    gr.grafic()
     print("Simulacion terminada")
 elif opcion == 3:
     print ("\nCASO 3")
@@ -100,6 +103,7 @@ elif opcion == 3:
             X0 = X0 + np.array(X_dot) * dt
             x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
         op.guardar_csv(x0, "RCAM.csv")
+        gr.grafic()
     elif eleccion == 2:
         U0 = [0, -0.1, 0, 0.08, 0]
         while t <= 180:
@@ -118,6 +122,7 @@ elif opcion == 3:
             X0 = X0 + np.array(X_dot) * dt
             x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
         op.guardar_csv(x0, "RCAM.csv")
+        gr.grafic()
         print("Simulacion terminada")
     else:
         print("opcion incorrecta, vuelva a intentarlo")
