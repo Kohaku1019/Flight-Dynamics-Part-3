@@ -83,7 +83,7 @@ elif opcion == 2:
             x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
             X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
     op.guardar_csv(X0_csv, "RCAM.csv")
-    gr.main()
+    gr.grafica()
     print("Simulacion terminada")
 elif opcion == 3:
     print ("\nCASO 3")
@@ -113,7 +113,7 @@ elif opcion == 3:
             x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
             X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
         op.guardar_csv(X0_csv, "RCAM.csv")
-        gr.main()
+        gr.grafica()
     elif eleccion == 2:
         U0 = [0, -0.1, 0, 0.08, 0]
         while t <= 180:
@@ -133,7 +133,7 @@ elif opcion == 3:
             x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
             X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
         op.guardar_csv(X0_csv, "RCAM.csv")
-        gr.main()
+        gr.grafica()
         print("Simulacion terminada")
     else:
         print("opcion incorrecta, vuelva a intentarlo")
