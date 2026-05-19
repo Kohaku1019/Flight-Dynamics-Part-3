@@ -16,6 +16,8 @@ if opcion == 1:
     U0 = [0, -0.1, 0, 0.08, 0.08]
     t = 0
     x0 = []
+    X0_csv = []
+    X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
     x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
     while t <= 180:
         X_dot = op.xdot(X0, U0)
@@ -32,7 +34,8 @@ if opcion == 1:
         t += dt
         X0 = X0 + np.array(X_dot) * dt
         x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
-    op.guardar_csv(x0, "RCAM.csv")
+        X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
+    op.guardar_csv(X0_csv, "RCAM.csv")
     gr.grafic()
     print("Simulacion terminada")
 elif opcion == 2:
@@ -41,7 +44,9 @@ elif opcion == 2:
     U0 = [0, -0.1, 0, 0.08, 0.08]
     t = 0
     x0 = []
+    X0_csv = []
     x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
+    X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
     while t <= 180:
         if t>29 and t<=32:
             U0 = [(5*np.pi/180), -0.1, 0, 0.08, 0.08]
@@ -59,6 +64,7 @@ elif opcion == 2:
             t += dt
             X0 = X0 + np.array(X_dot) * dt
             x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
+            X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
     
         else:    
             (X_dot) = op.xdot(X0, U0)
@@ -75,7 +81,8 @@ elif opcion == 2:
             t += dt
             X0 = X0 + np.array(X_dot) * dt
             x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
-    op.guardar_csv(x0, "RCAM.csv")
+            X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
+    op.guardar_csv(X0_csv, "RCAM.csv")
     gr.grafic()
     print("Simulacion terminada")
 elif opcion == 3:
@@ -83,7 +90,9 @@ elif opcion == 3:
     X0 = [85, 0, 0, 0, 0, 0, 0, 0.1, 0]
     t = 0
     x0 = []
+    X0_csv = []
     x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
+    X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
     eleccion = int(input("\nQue motor desea fallar\n1. motor izquierdo\n2. motor derecho\n >>>    "))
     if eleccion == 1:
         U0 = [0, -0.1, 0, 0, 0.08]
@@ -102,7 +111,8 @@ elif opcion == 3:
             t += dt
             X0 = X0 + np.array(X_dot) * dt
             x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
-        op.guardar_csv(x0, "RCAM.csv")
+            X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
+        op.guardar_csv(X0_csv, "RCAM.csv")
         gr.grafic()
     elif eleccion == 2:
         U0 = [0, -0.1, 0, 0.08, 0]
@@ -121,7 +131,8 @@ elif opcion == 3:
             t += dt
             X0 = X0 + np.array(X_dot) * dt
             x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
-        op.guardar_csv(x0, "RCAM.csv")
+            X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
+        op.guardar_csv(X0_csv, "RCAM.csv")
         gr.grafic()
         print("Simulacion terminada")
     else:

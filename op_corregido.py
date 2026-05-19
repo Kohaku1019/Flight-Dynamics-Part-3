@@ -351,7 +351,7 @@ def xdot(X, U):
 # SAVE CSV
 # ==========================================
 
-def guardar_csv(pos, nombre_archivo="RCAM.csv"):
+def guardar_csv(X0_csv, nombre_archivo="RCAM.csv"):
 
     with open(nombre_archivo, mode='w', newline='') as archivo:
 
