@@ -644,7 +644,7 @@ def grafica():
     # =========================
     # ANIMACIÓN
     # =========================
-    INTERVAL_MS = 0   # ms entre frames (ajusta para velocidad)
+    INTERVAL_MS = 1000   # ms entre frames (ajusta para velocidad)
 
     all_lines = [line_da, line_de, line_dr, line_em1, line_em2,
                  line_u, line_v, line_w, line_p, line_q, line_r,

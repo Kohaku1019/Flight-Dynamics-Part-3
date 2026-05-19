@@ -92,7 +92,7 @@ elif opcion == 3:
     x0 = []
     X0_csv = []
     x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
-    eleccion = int(input("\nQue motor desea fallar\n1. motor izquierdo\n2. motor derecho\n >>>    "))
+    eleccion = int(input("\nQue motor desea fallar\n1. motor derecho\n2. motor izquierdo\n >>>    "))
     if eleccion == 1:
         U0 = [0, -0.1, 0, 0, 0.08]
         X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
