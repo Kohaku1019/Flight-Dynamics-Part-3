@@ -21,7 +21,7 @@ if opcion == 1:
     x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
     while t <= 180:
         X_dot = op.xdot(X0, U0)
-        dt = 0.9
+        dt = 0.3
         x1 = X_dot[0]
         x2 = X_dot[1]
         x3 = X_dot[2]
@@ -51,7 +51,7 @@ elif opcion == 2:
         if t>29 and t<=32:
             U0 = [(5*np.pi/180), -0.1, 0, 0.08, 0.08]
             X_dot = op.xdot(X0, U0)
-            dt = 0.9
+            dt = 0.3
             x1 = X_dot[0]
             x2 = X_dot[1]
             x3 = X_dot[2]
@@ -68,7 +68,7 @@ elif opcion == 2:
     
         else:    
             (X_dot) = op.xdot(X0, U0)
-            dt = 0.9
+            dt = 0.3
             x1 = X_dot[0]
             x2 = X_dot[1]
             x3 = X_dot[2]
@@ -98,7 +98,7 @@ elif opcion == 3:
         X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
         while t <= 180:
             X_dot = op.xdot(X0, U0)
-            dt = 0.9
+            dt = 0.3
             x1 = X_dot[0]
             x2 = X_dot[1]
             x3 = X_dot[2]
@@ -118,7 +118,7 @@ elif opcion == 3:
         U0 = [0, -0.1, 0, 0.08, 0]
         while t <= 180:
             X_dot = op.xdot(X0, U0)
-            dt = 0.9
+            dt = 0.3
             x1 = X_dot[0]
             x2 = X_dot[1]
             x3 = X_dot[2]
