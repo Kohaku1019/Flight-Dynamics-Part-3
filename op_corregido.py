@@ -359,6 +359,11 @@ def guardar_csv(X0_csv, nombre_archivo="RCAM.csv"):
 
         writer.writerow([
             "time",
+            "aleron",
+            "elevador",
+            "rudder",
+            "motor 1",
+            "motor 2",
             "u",
             "v",
             "w",

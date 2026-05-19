@@ -5,7 +5,6 @@ import matplotlib.animation as animation
 import numpy as np
 import pandas as pd
 from matplotlib.gridspec import GridSpec
-
 def grafic():
     # =========================
     # LEER CSV
@@ -40,8 +39,8 @@ def grafic():
     lim_da  = (-25 * PI_180,  25 * PI_180)
     lim_de  = (-25 * PI_180,  10 * PI_180)
     lim_dr  = (-30 * PI_180,  30 * PI_180)
-    lim_em1 = (0.5 * PI_180,  10 * PI_180)
-    lim_em2 = (0.5 * PI_180,  10 * PI_180)
+    lim_em1 = (0, 1)
+    lim_em2 = (0, 1)
 
     # =========================
     # MATRICES DE ROTACIÓN
