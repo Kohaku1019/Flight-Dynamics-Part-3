@@ -766,5 +766,5 @@ def grafic():
     plt.tight_layout()
     plt.show()
 
-grafica()
+grafic()
 input()
