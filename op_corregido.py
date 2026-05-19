@@ -370,7 +370,7 @@ def guardar_csv(X0_csv, nombre_archivo="RCAM.csv"):
             "psi"
         ])
 
-        for fila in pos:
+        for fila in X0_csv:
             writer.writerow(fila)
 
     print(f"Archivo guardado como: {nombre_archivo}")
