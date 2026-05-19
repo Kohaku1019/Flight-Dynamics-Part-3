@@ -17,23 +17,23 @@ def grafic():
     # Columnas esperadas (por orden):
     # deflexion_aleron, deflexion_elevador, deflexion_ruder,
     # empuje_motor1, empuje_motor2, u, v, w, p, q, r, phi, theta, zhi
-    da_data    = df.iloc[:, 0].values   # Deflexion aleron
-    de_data    = df.iloc[:, 1].values   # Deflexion elevador
-    dr_data    = df.iloc[:, 2].values   # Deflexion ruder
-    em1_data   = df.iloc[:, 3].values   # Empuje Motor 1
-    em2_data   = df.iloc[:, 4].values   # Empuje Motor 2
-    u_data     = df.iloc[:, 5].values   # u
-    v_data     = df.iloc[:, 6].values   # v
-    w_data     = df.iloc[:, 7].values   # w
-    p_data     = df.iloc[:, 8].values   # p
-    q_data     = df.iloc[:, 9].values   # q
-    r_data     = df.iloc[:, 10].values  # r
-    phi_data   = df.iloc[:, 11].values  # phi
-    theta_data = df.iloc[:, 12].values  # theta
-    zhi_data   = df.iloc[:, 13].values  # zhi
+    t_data     = df.iloc[:, 0].values   # Tiempo
+    da_data    = df.iloc[:, 1].values   # Deflexion aleron
+    de_data    = df.iloc[:, 2].values   # Deflexion elevador
+    dr_data    = df.iloc[:, 3].values   # Deflexion ruder
+    em1_data   = df.iloc[:, 4].values   # Empuje Motor 1
+    em2_data   = df.iloc[:, 5].values   # Empuje Motor 2
+    u_data     = df.iloc[:, 6].values   # u
+    v_data     = df.iloc[:, 7].values   # v
+    w_data     = df.iloc[:, 8].values   # w
+    p_data     = df.iloc[:, 9].values   # p
+    q_data     = df.iloc[:, 10].values  # q
+    r_data     = df.iloc[:, 11].values  # r
+    phi_data   = df.iloc[:, 12].values  # phi
+    theta_data = df.iloc[:, 13].values  # theta
+    zhi_data   = df.iloc[:, 14].values  # zhi
 
     N = len(da_data)
-    t_data = np.arange(N)  # índice de muestra como eje de tiempo
 
     # Límites para las superficies de control y empuje
     PI_180 = np.pi / 180
