@@ -48,7 +48,7 @@ elif opcion == 2:
     x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
     X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
     while t <= 180:
-        if t>29 and t<=32:
+        if t>=30 and t<=32:
             U0 = [(5*np.pi/180), -0.1, 0, 0.08, 0.08]
             X_dot = op.xdot(X0, U0)
             dt = 0.3
@@ -65,8 +65,8 @@ elif opcion == 2:
             X0 = X0 + np.array(X_dot) * dt
             x0.append([t, X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
             X0_csv.append([t, U0[0], U0[1], U0[2], U0[3], U0[4], X0[0], X0[1], X0[2], X0[3], X0[4], X0[5], X0[6], X0[7], X0[8]])
-    
-        else:    
+        else:   
+            U0 = [0, -0.1, 0, 0.08, 0.08] 
             (X_dot) = op.xdot(X0, U0)
             dt = 0.3
             x1 = X_dot[0]
