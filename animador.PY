@@ -21,8 +21,8 @@ def grafica():
     da_data    = df.iloc[:, 1].values   # Deflexion aleron
     de_data    = df.iloc[:, 2].values   # Deflexion elevador
     dr_data    = df.iloc[:, 3].values   # Deflexion ruder
-    em1_data   = df.iloc[:, 4].values   # Empuje Motor 1
-    em2_data   = df.iloc[:, 5].values   # Empuje Motor 2
+    em1_data   = df.iloc[:, 5].values   # Empuje Motor 1
+    em2_data   = df.iloc[:, 4].values   # Empuje Motor 2
     u_data     = df.iloc[:, 6].values   # u
     v_data     = df.iloc[:, 7].values   # v
     w_data     = df.iloc[:, 8].values   # w

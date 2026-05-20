@@ -183,7 +183,7 @@ def result_optimization():
     trim_state, final_cost = particle_swarm_optimization()
     J = cost_function([trim_state[0],trim_state[1],trim_state[2],trim_state[3],trim_state[4]])
     print("\n========== RESULTADO DE TRIM ==========")
-    print(f"la funcion de costo obtenida es j = u**2 + dv**2 + dw**2 + dp**2 + dq**2 + dr**2 + (V - TARGET_SPEED)**2+ dphi**2+ (dzhi - TARGET_PSI)**2")
+    print(f"la funcion de costo obtenida es j = du**2 + dv**2 + dw**2 + dp**2 + dq**2 + dr**2 + (V - TARGET_SPEED)**2+ dphi**2+ (dzhi - TARGET_PSI)**2")
     print(f"u       = {trim_state[0]} m/s")
     print(f"w       = {trim_state[1]} m/s")
     print(f"theta   = {trim_state[2]} rad")
