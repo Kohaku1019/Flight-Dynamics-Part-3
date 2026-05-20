@@ -151,7 +151,7 @@ elif opcion == 3:
     ])
 
     eleccion = int(input(
-        "\nQue motor desea fallar\n1. motor derecho\n2. motor izquierdo\n >>>    "
+        "\nQue motor desea fallar\n1. motor izquierdo\n2. motor derecho\n >>>    "
     ))
 
     if eleccion == 1:
