@@ -140,7 +140,7 @@ elif opcion == 3:
     X0 = np.array([85, 0, 0, 0, 0, 0, 0, 0.1, 0], dtype=float)
 
     t = 0
-    dt = 0.3
+    dt = 0.1
 
     x0 = []
     X0_csv = []

@@ -1,7 +1,7 @@
 import op_corregido as op 
 import numpy as np
 import trim_pso as tri
-import animador as gr
+
 print ("Bienvenido ingeniero al programa de simulacion de vuelo")
 print("Cual caso desea experimentar")
 print("1. Vuelo recto y nivelado")
